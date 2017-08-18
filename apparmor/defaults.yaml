@@ -3,5 +3,6 @@
 apparmor:
   pkg: apparmor
   config: '/etc/apparmor'
+  config_dir: '/etc/apparmor.d'
   service:
     name: apparmor
