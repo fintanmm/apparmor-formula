@@ -2,8 +2,7 @@
 apparmor-formula
 ================
 
-A saltstack formula that is empty. It has dummy content to help with a quick
-start on a new formula.
+A saltstack formula that for managing Apparmor.
 
 .. note::
 
@@ -20,3 +19,18 @@ Available states
 ------------
 
 Installs the apparmor package, and starts the associated apparmor service.
+
+``apparmor.complain``
+------------
+
+Places apparmore profiles into complain mode.
+
+``apparmor.enforce``
+------------
+
+Places apparmore profiles into enforce mode.
+
+``apparmor.disable``
+------------
+
+Places apparmore profiles into disabled mode.
