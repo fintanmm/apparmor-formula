@@ -6,7 +6,7 @@
 apparmor-config:
   file.managed:
     - name: {{ apparmor.config }}
-    - source: salt://apparmor/files/example.tmpl
+    - source: salt://apparmor/files/parser.conf
     - mode: 644
     - user: root
     - group: root

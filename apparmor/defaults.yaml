@@ -2,7 +2,7 @@
 # vim: ft=yaml
 apparmor:
   pkg: apparmor
-  config: '/etc/apparmor'
+  config: '/etc/apparmor/parser.conf'
   config_dir: '/etc/apparmor.d'
   service:
     name: apparmor
