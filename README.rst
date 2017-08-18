@@ -23,14 +23,14 @@ Installs the apparmor package, and starts the associated apparmor service.
 ``apparmor.complain``
 ------------
 
-Places apparmore profiles into complain mode.
+Places apparmor profiles into complain mode.
 
 ``apparmor.enforce``
 ------------
 
-Places apparmore profiles into enforce mode.
+Places apparmor profiles into enforce mode.
 
 ``apparmor.disable``
 ------------
 
-Places apparmore profiles into disabled mode.
+Places apparmor profiles into disabled mode.
