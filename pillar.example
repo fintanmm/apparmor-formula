@@ -1,3 +1,12 @@
 apparmor:
-  lookup:
-    master: apparmor-master
+  complain:
+    - usr.sbin.rsyslog
+  enforce:
+    - usr.sbin.nginx
+    - usr.sbin.php7.0-fpm
+    - usr.sbin.mysql
+  disable:
+    - usr.bin.ssh
+  include:
+    usr.sbin.php7.0-fpm: 
+      - wordpress
