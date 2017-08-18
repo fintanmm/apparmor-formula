@@ -5,4 +5,6 @@
 
 apparmor-pkg:
   pkg.installed:
-    - name: {{ apparmor.pkg }}
+    - pkgs: 
+      - {{ apparmor.pkg }}
+      - {{ apparmor.utils_pkg }}
