@@ -1,4 +1,4 @@
-template formula
+apparmor formula
 ================
 
 0.0.5 (2014-07-28)

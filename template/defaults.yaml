@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # vim: ft=yaml
-template:
-  pkg: template
-  config: '/etc/template'
+apparmor:
+  pkg: apparmor
+  config: '/etc/apparmor'
   service:
-    name: template
+    name: apparmor

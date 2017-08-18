@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-{% from "template/map.jinja" import template with context %}
+{% from "apparmor/map.jinja" import apparmor with context %}
 
-template-config:
+apparmor-config:
   file.managed:
-    - name: {{ template.config }}
-    - source: salt://template/files/example.tmpl
+    - name: {{ apparmor.config }}
+    - source: salt://apparmor/files/example.tmpl
     - mode: 644
     - user: root
     - group: root

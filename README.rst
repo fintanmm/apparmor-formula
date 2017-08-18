@@ -1,5 +1,5 @@
 ================
-template-formula
+apparmor-formula
 ================
 
 A saltstack formula that is empty. It has dummy content to help with a quick
@@ -16,7 +16,7 @@ Available states
 .. contents::
     :local:
 
-``template``
+``apparmor``
 ------------
 
-Installs the template package, and starts the associated template service.
+Installs the apparmor package, and starts the associated apparmor service.

@@ -2,6 +2,6 @@
 # vim: ft=sls
 
 include:
-  - template.install
-  - template.config
-  - template.service
+  - apparmor.install
+  - apparmor.config
+  - apparmor.service

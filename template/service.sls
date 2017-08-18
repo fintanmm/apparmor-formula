@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-{% from "template/map.jinja" import template with context %}
+{% from "apparmor/map.jinja" import apparmor with context %}
 
-template-name:
+apparmor-name:
   service.running:
-    - name: {{ template.service.name }}
+    - name: {{ apparmor.service.name }}
     - enable: True

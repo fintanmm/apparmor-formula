@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-{% from "template/map.jinja" import template with context %}
+{% from "apparmor/map.jinja" import apparmor with context %}
 
-template-pkg:
+apparmor-pkg:
   pkg.installed:
-    - name: {{ template.pkg }}
+    - name: {{ apparmor.pkg }}

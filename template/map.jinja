@@ -2,7 +2,7 @@
 # vim: ft=jinja
 
 {## Start with defaults from defaults.yaml ##}
-{% import_yaml 'template/defaults.yaml' as default_settings %}
+{% import_yaml 'apparmor/defaults.yaml' as default_settings %}
 
 {##
 Setup variables using grains['os_family'] based logic, only add key:values
@@ -12,22 +12,22 @@ that differ from what is in defaults.yaml
         'Debian': {},
         'Suse': {},
         'Arch': {
-            "pkg" : 'template-arch',
+            "pkg" : 'apparmor-arch',
         },
         'RedHat': {
-            "config": '/etc/template.conf',
+            "config": '/etc/apparmor.conf',
         },
   }
   , grain="os_family"
-  , merge=salt['pillar.get']('template:lookup'))
+  , merge=salt['pillar.get']('apparmor:lookup'))
 %}
 {## Merge the flavor_map to the default settings ##}
-{% do default_settings.template.update(os_family_map) %}
+{% do default_settings.apparmor.update(os_family_map) %}
 
-{## Merge in template:lookup pillar ##}
-{% set template = salt['pillar.get'](
-        'template',
-        default=default_settings.template,
+{## Merge in apparmor:lookup pillar ##}
+{% set apparmor = salt['pillar.get'](
+        'apparmor',
+        default=default_settings.apparmor,
         merge=True
     )
 %}
