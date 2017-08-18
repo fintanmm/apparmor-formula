@@ -7,4 +7,5 @@ def test_apparmor_is_installed(host):
 
 
 def test_config_file(host):
-    apparmor = host.file("/etc/apparmor.conf")
+    apparmor = host.file("/etc/apparmor/parser.conf")
+    assert apparmor.contains("verbose")
