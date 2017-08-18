@@ -6,6 +6,11 @@ def test_apparmor_is_installed(host):
     assert apparmor.is_installed
 
 
+def test_apparmor_utils_is_installed(host):
+    apparmor_utils = host.package("apparmor-utils")
+    assert apparmor_utils.is_installed
+
+
 def test_apparmor_running_and_enabled(host):
     apparmor = host.service("apparmor")
     assert apparmor.is_running
