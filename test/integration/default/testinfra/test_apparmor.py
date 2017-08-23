@@ -11,6 +11,11 @@ def test_apparmor_utils_is_installed(host):
     assert apparmor_utils.is_installed
 
 
+def test_apparmor_is_loaded(host):
+    apparmor_status = host.check_output("apparmor_status")
+    assert "apparmor module is loaded." in apparmor_status
+
+
 def test_apparmor_running_and_enabled(host):
     apparmor = host.service("apparmor")
     assert apparmor.is_running
