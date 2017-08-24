@@ -3,6 +3,14 @@
 
 {% from "apparmor/map.jinja" import apparmor with context %}
 
+{% if apparmor.debug == 'no' %}]
+apparmor-debug:
+  cmd.run:
+    - name: aa-logprof
+    - bg: True
+{% endif %}
+
+
 apparmor-config:
   file.managed:
     - name: {{ apparmor.config }}

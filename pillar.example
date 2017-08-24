@@ -1,4 +1,5 @@
 apparmor:
+  debug: 'no'
   complain:
     - usr.sbin.rsyslog
   enforce:

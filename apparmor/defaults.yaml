@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # vim: ft=yaml
 apparmor:
+  debug: 'no'
   pkg: apparmor
   utils_pkg: apparmor-utils
   config: '/etc/apparmor/parser.conf'
