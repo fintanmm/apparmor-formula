@@ -3,7 +3,7 @@
 
 {% from "apparmor/map.jinja" import apparmor with context %}
 
-{% if apparmor.debug == 'no' %}]
+{% if apparmor.debug == 'no' %}
 apparmor-debug:
   cmd.run:
     - name: aa-logprof
