@@ -12,12 +12,12 @@ profile-enforce:
 
 {% for profile in apparmor.enforce %}
 {% if profile in apparmor.include %}
-  {% set local_profiles = {{profile}} %}
+  {% set local_profiles = profile %}
 {% endif %}
 
 {{ profile }}:
   file.replace:
-    - name: /etc/apparmor.d/{{profile}}
+    - name: /etc/apparmor.d/{{ profile }}
     - pattern: '\}'
     - repl: |
 {% for local_profile in local_profiles %}
