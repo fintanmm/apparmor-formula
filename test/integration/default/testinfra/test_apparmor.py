@@ -14,7 +14,7 @@ def test_apparmor_utils_is_installed(host):
 def test_apparmor_is_loaded(host):
     apparmor_status = host.check_output("apparmor_status")
     assert "apparmor module is loaded." in apparmor_status
-    assert "apparmor filesystem is not mounted." not in apparmor_status
+    assert "apparmor filesystem is not mounted." in apparmor_status
 
 
 def test_apparmor_running_and_enabled(host):
