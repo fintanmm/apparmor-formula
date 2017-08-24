@@ -11,8 +11,9 @@ profile-enforce:
     - bg: True
 
 {% for profile in apparmor.enforce %}
-
-{% set local_profiles = apparmor.include|attr('{{profile}}') %}
+{% if profile in apparmor.include %}
+  {% set local_profiles = {{profile}} %}
+{% endif %}
 
 {{ profile }}:
   file.replace:
