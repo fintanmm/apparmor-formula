@@ -10,4 +10,3 @@ apparmor-name:
     - reload: True
     - watch:
       - file: /etc/apparmor.d/usr*
-      - pkg: {{ apparmor.pkg }}
