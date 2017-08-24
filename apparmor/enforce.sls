@@ -10,7 +10,7 @@ profile-enforce:
 
 {% for profile in apparmor.enforce %}
 
-{% set local_profiles = apparmor.include.{{ profile }} %}
+{% set local_profiles = apparmor.include['{{ profile }}'] %}
 
 {{ profile }}:
   file.replace:
