@@ -9,5 +9,6 @@ services:
 before_install:
   - docker pull saltstack/ubuntu-14.04
   - pip install -r requirements.txt
+  - mount securityfs -t securityfs /sys/kernel/security
 
 script: bundle exec kitchen verify
