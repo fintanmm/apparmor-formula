@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
+{% from "apparmor/map.jinja" import apparmor with context %}
+
 {% set profiles = apparmor.complain | join(' ') %}
 
 profile-complain:
