@@ -19,7 +19,7 @@ profile-enforce:
     - name: /etc/apparmor.d/{{profile}}
     - pattern: '\}'
     - repl: |
-{% for local_profile in local_profiles['{{ profile }}'] %}
+{% for local_profile in local_profiles[{{ profile }}] %}
         #include <local/{{ local_profile }}>
 {% endfor %}
         \}
